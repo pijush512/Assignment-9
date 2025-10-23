@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router';
-import '../Navbar/Navbar.css'
+import { Link, NavLink } from 'react-router';
+import '../Navbar/Navbar.css';
+import logo from '../../assets/Logo.png'
 
 const links = <>
   <li><NavLink to="/">Home</NavLink></li>
@@ -10,7 +11,7 @@ const links = <>
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm" >
+    <div className="navbar " >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,15 +23,18 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">
+          <img className="w-[80px]" src={logo} alt="" />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {links}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-2">
+        <Link to="/login" className=" btn bg-blue-400 text-white font-bold px-7">Login</Link>
+        <Link to="/register" className="btn bg-blue-400 text-white font-bold px-5" >Register</Link>
       </div>
     </div >
   );
