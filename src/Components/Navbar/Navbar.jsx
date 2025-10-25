@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import '../Navbar/Navbar.css';
 import logo from '../../assets/Logo.png'
+import { AuthContext } from '../../Context/AuthContext/AuthContext';
 
 const links = <>
   <li><NavLink to="/">Home</NavLink></li>
@@ -10,6 +11,8 @@ const links = <>
 </>
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="navbar " >
       <div className="navbar-start">
@@ -33,8 +36,19 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <Link to="/login" className=" btn bg-blue-400 text-white font-bold px-7">Login</Link>
-        <Link to="/register" className="btn bg-blue-400 text-white font-bold px-5" >Register</Link>
+        {
+          user ?
+            <>
+              <Link to="/profile" className=" btn bg-blue-400 text-white font-bold px-7">Profil</Link>
+              <Link to="/signout" className="btn bg-blue-400 text-white font-bold px-5" >SignOut</Link>
+            </>
+            :
+            <>
+              <Link to="/login" className=" btn bg-blue-400 text-white font-bold px-7">Login</Link>
+              <Link to="/register" className="btn bg-blue-400 text-white font-bold px-5" >Register</Link>
+            </>
+        }
+
       </div>
     </div >
   );

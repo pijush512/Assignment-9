@@ -1,27 +1,25 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+
+import React, { use } from 'react';
 import { Link } from 'react-router';
-import { auth } from '../../Firebase/Firebase.init';
+import { AuthContext } from '../../Context/AuthContext/AuthContext';
 
 const Register = () => {
+  const { creatUser } = use(AuthContext);
 
   const handelRegister = (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    // console.log(name, email, password);
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(result => {
-        console.log(result);
+    creatUser(email, password)
+      .then((result) => {
+        console.log(result.user);
       })
-      .catch(error => {
-        console.log(error)
-      })
-
-
+      .catch((error => {
+        console.log(error);
+      }))
   }
+
 
   return (
     <div>
@@ -35,7 +33,7 @@ const Register = () => {
               <form onSubmit={handelRegister} className="fieldset" >
                 {/* Name */}
                 < label className="label">Name</label>
-                <input name="name" type="name" className="input" placeholder="Email" />
+                <input name="name" type="text" className="input" placeholder="Your NAme" />
                 {/* Email */}
                 <label className="label">Email</label>
                 <input name="email" type="email" className="input" placeholder="Email" />
@@ -44,7 +42,7 @@ const Register = () => {
                 <input name="password" type="password" className="input" placeholder="Password" />
 
                 <div>
-                  Allready have an account? Plase
+                  <span>Allready have an account? Plase</span>
                   <span className='link-hover text-blue-600 font-semibold'>
                     <Link to="/login"> Login</Link>
                   </span>
