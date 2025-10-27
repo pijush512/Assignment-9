@@ -1,17 +1,29 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import '../Navbar/Navbar.css';
 import logo from '../../assets/Logo.png'
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 
-const links = <>
-  <li><NavLink to="/">Home</NavLink></li>
-  <li><NavLink to="/about">About</NavLink></li>
-  <li><NavLink to="/contact">Contact</NavLink></li>
-</>
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, signOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handeSignlOut = () => {
+    signOutUser()
+      .then(() => {
+        alert('SignOut');
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
+  const links = <>
+    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="/about">About</NavLink></li>
+    <li><NavLink to="/contact">Contact</NavLink></li>
+  </>
 
   return (
     <div className="navbar " >
@@ -39,8 +51,10 @@ const Navbar = () => {
         {
           user ?
             <>
-              <Link to="/profile" className=" btn bg-blue-400 text-white font-bold px-7">Profil</Link>
-              <Link to="/signout" className="btn bg-blue-400 text-white font-bold px-5" >SignOut</Link>
+              <Link to="/profile" className=" w-[50px]">
+                <img src={user.photoURL} alt="" />
+              </Link>
+              <Link to="/signout" onClick={handeSignlOut} className="btn bg-blue-400 text-white font-bold px-5" >SignOut</Link>
             </>
             :
             <>

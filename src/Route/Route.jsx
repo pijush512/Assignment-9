@@ -7,6 +7,9 @@ import Contact from '../Pages/Contact';
 import ErrorPage from '../Components/ErrorPage/ErrorPage';
 import Register from '../Components/Register/Register';
 import Login from '../Components/Login/Login';
+import PrivateRoute from './PrivateRoute';
+import GameDetails from '../Components/GameDetails/GameDetails';
+import Profile from '../Components/Profile/Profile';
 
 
 
@@ -19,6 +22,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
+        loader: async () => {
+          const res = await fetch("/games.json");
+          const data = await res.json();          // JSON parse
+          return data;
+        },
       },
       {
         path: "/about",
@@ -36,7 +44,21 @@ const router = createBrowserRouter([
         path: "/register",
         Component: Register,
       },
-
+      {
+        path: "/game/:id",
+        element: <PrivateRoute>
+          <GameDetails></GameDetails>
+        </PrivateRoute>,
+        loader: async () => {
+          const res = await fetch("/games.json");
+          const data = await res.json();
+          return data;
+        },
+      },
+      {
+        path: "/profile",
+        Component: Profile,
+      }
     ]
   },
 ]);
