@@ -10,7 +10,7 @@ import sliderC from '../../assets/Slider-4.webp'
 
 const Banner = () => {
   return (
-    <div className="w-full max-w-11/12 mx-auto rounded-2xl overflow-hidden">
+    <div className="w-full max-w-11/12 mx-auto rounded-2xl pt-10 overflow-hidden">
       <Swiper
         modules={[Navigation, Autoplay, Pagination]}
         navigation

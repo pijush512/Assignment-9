@@ -8,14 +8,14 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <div className="p-5">
-        <h1 className="text-3xl font-bold mb-3">Your Profile</h1>
+    <div className='h-screen flex items-center justify-center'>
+      <div className="p-10">
+        <h1 className="text-5xl text-blue-600 font-bold mb-3">Your Profile</h1>
         <p><strong>Name:</strong> {user.displayName}</p>
         <p><strong>Email:</strong> {user.email}</p>
-        <img src={user.photoURL} alt="Profile" className="w-32 h-32 rounded-full mt-3" />
+        <img src={user.photoURL} alt="Profile" className="rounded-bl-4xl rounded-tr-4xl mt-3" />
       </div>
-    </div>
+    </div >
   );
 };
 

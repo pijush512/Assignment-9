@@ -8,11 +8,10 @@ import Home from '../Pages/Home';
 const Root = () => {
   return (
     <div >
-      <header className='w-full max-w-11/12 mx-auto '>
+      <header>
         <Navbar></Navbar>
-        {/* <Banner></Banner> */}
       </header>
-      <main>
+      <main className='bg-gray-300'>
         <Outlet></Outlet>
       </main>
       <footer>
