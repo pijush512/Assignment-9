@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import '../Navbar/Navbar.css';
 import logo from '../../assets/logo.png'
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
+import toast from 'react-hot-toast';
 
 
 const Navbar = () => {
@@ -11,11 +12,11 @@ const Navbar = () => {
   const handeSignlOut = () => {
     signOutUser()
       .then(() => {
-        alert('SignOut');
+        toast.success('SignOut');
         navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        toast.error('Somthing Wrong')
       })
   }
 

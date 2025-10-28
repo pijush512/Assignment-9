@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.init';
+import toast from 'react-hot-toast';
 
 
 const Login = () => {
@@ -35,13 +36,13 @@ const Login = () => {
 
     signInUser(email, password)
       .then(() => {
-        alert('Sucessful')
+        toast.success('Login Sucessful');
         event.target.reset();
         navigate(from, { replace: true });
 
       })
       .catch((() => {
-        alert('Somthing is worng')
+        toast.error('Something is wrong!');
       }))
   }
 

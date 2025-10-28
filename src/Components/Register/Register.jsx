@@ -3,6 +3,7 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import { updateProfile } from "firebase/auth";
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const { creatUser } = use(AuthContext);
@@ -40,13 +41,13 @@ const Register = () => {
         })
       })
       .then(() => {
-        alert('Registration Successful!');
+        toast.success('Registration Successful!');
         event.target.reset();
         navigate("/");
       })
-      .catch((error => {
-        console.log(error);
-      }))
+      .catch(() => {
+        toast.error('Registration failed! Please try again.');
+      })
   }
 
 

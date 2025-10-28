@@ -4,6 +4,7 @@ import { Outlet } from 'react-router';
 import Footer from '../Components/Footer/Footer';
 import Banner from '../Components/Banner/Banner';
 import Home from '../Pages/Home';
+import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
   return (
@@ -17,7 +18,7 @@ const Root = () => {
       <footer>
         <Footer></Footer>
       </footer>
-
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };
