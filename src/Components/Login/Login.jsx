@@ -1,13 +1,32 @@
 import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../../Firebase/Firebase.init';
 
 
 const Login = () => {
   const { signInUser } = use(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const googleProvider = new GoogleAuthProvider();
   const from = location.state?.from?.pathname || '/';
+
+
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        alert('Google login successful!');
+        navigate(from, { replace: true });
+        console.log(result.user)
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Google login failed!');
+      });
+  };
+
+
 
   const handelLogIn = (event) => {
     event.preventDefault();
@@ -52,6 +71,14 @@ const Login = () => {
                     </div>
                   </div>
                   <button className="btn btn-neutral mt-4">Login</button>
+                  <button
+                    type="button"
+                    onClick={handleGoogleLogin}
+                    className="btn btn-outline btn-primary mt-2"
+                  >
+                    Login with Google
+                  </button>
+
                 </form>
               </div>
             </div>
