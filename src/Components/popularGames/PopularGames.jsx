@@ -8,12 +8,12 @@ const PopularGames = ({ games }) => {
     <div className='mt-10'>
       <h2 className='mb-5 font-bold text-4xl text-center'>Popular Games</h2>
 
-      <div className='w-full max-w-11/12 mx-auto grid grid-cols-3 gap-6 mb-10'>
+      <div className='w-full max-w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10'>
         {
           topGames.map(game => (
             <Link to={`/game/${game.id}`} key={game.id}>
               < div >
-                <div className="card bg-base-100 shadow-sm">
+                <div className="card bg-base-100 shadow-sm h-[400px]">
                   <figure>
                     <img
                       src={game.coverPhoto}

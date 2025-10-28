@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Player Unknown's Battle Ground: PUBG",
-    "coverPhoto": "https://i.ibb.co.com/rfLC1Scn/Liton.jpg",
+    "coverPhoto": "https://i.ibb.co/mC779RPh/a.jpg",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
     "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Call of Duty: Mobile",
-    "coverPhoto": "https://example.com/images/cod-mobile.png",
+    "coverPhoto": "https://i.ibb.co/zVTfdPSj/b.jpg",
     "category": "FPS",
     "downloadLink": "https://www.callofduty.com/mobile",
     "description": "Call of Duty: Mobile brings the classic COD experience to your mobile with multiplayer, battle royale, and seasonal events.",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Genshin Impact",
-    "coverPhoto": "https://example.com/images/genshin.png",
+    "coverPhoto": "https://i.ibb.co/VWSwTFcj/c.webp",
     "category": "Adventure",
     "downloadLink": "https://genshin.hoyoverse.com/en",
     "description": "Genshin Impact is an open-world action RPG featuring elemental combat, beautiful graphics, and immersive storylines.",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Fortnite",
-    "coverPhoto": "https://example.com/images/fortnite.png",
+    "coverPhoto": "https://i.ibb.co/HTt9gfHz/d.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
     "description": "Fortnite is a colorful battle royale game with building mechanics, creative modes, and exciting seasonal events.",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "title": "Among Us",
-    "coverPhoto": "https://example.com/images/amongus.png",
+    "coverPhoto": "https://i.ibb.co/NgtZdkks/e.jpg",
     "category": "Party",
     "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
     "description": "Among Us is a multiplayer party game where crewmates work together while impostors try to sabotage and eliminate them.",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "title": "Minecraft",
-    "coverPhoto": "https://example.com/images/minecraft.png",
+    "coverPhoto": "https://i.ibb.co/YByr3gGY/f.png",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/en-us",
     "description": "Minecraft is a sandbox game that allows players to build, explore, and survive in infinite blocky worlds.",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "title": "League of Legends",
-    "coverPhoto": "https://example.com/images/lol.png",
+    "coverPhoto": "https://i.ibb.co/zhctpKQj/g.webp",
     "category": "MOBA",
     "downloadLink": "https://www.leagueoflegends.com/",
     "description": "League of Legends is a multiplayer online battle arena game where players choose champions to fight in strategic 5v5 matches.",
@@ -72,7 +72,7 @@
   {
     "id": "8",
     "title": "Apex Legends",
-    "coverPhoto": "https://example.com/images/apex.png",
+    "coverPhoto": "https://i.ibb.co/390njfB8/h.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.ea.com/games/apex-legends",
     "description": "Apex Legends is a fast-paced battle royale with unique legends, each with special abilities, in squads of three.",
@@ -82,7 +82,7 @@
   {
     "id": "9",
     "title": "Valorant",
-    "coverPhoto": "https://example.com/images/valorant.png",
+    "coverPhoto": "https://i.ibb.co/hJw5mPn6/i.webp",
     "category": "FPS",
     "downloadLink": "https://playvalorant.com/",
     "description": "Valorant is a tactical FPS with agents that have unique abilities, combining precise shooting with strategy.",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "title": "The Witcher 3: Wild Hunt",
-    "coverPhoto": "https://example.com/images/witcher3.png",
+    "coverPhoto": "https://i.ibb.co/rRtkRGZv/j.jpg",
     "category": "RPG",
     "downloadLink": "https://thewitcher.com/en/witcher3",
     "description": "The Witcher 3 is an open-world RPG where players hunt monsters, complete quests, and explore a vast, beautiful fantasy world.",
