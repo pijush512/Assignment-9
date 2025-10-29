@@ -2,7 +2,7 @@
 
 2.purpose: The purpose of this project is to let users explore, view, and support different indie games through a modern, responsive web app built with React and Firebase.
 
-3. live URL:
+3. live URL:https://assignment-9-9cb6f.web.app
 
 4.key features: 
     a.Responsive design for all devices  
